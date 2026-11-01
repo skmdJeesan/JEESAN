@@ -1,1 +1,1 @@
-This is personal portfolio website.
+Hello, welcome to my github repo! please checkout my website and all project works.
