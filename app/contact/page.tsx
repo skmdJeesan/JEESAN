@@ -62,7 +62,7 @@ const Page = () => {
     <div className='h-screen p-4 sm:px-20 sm:py-16'>
       <div className="w-full flex flex-col justify-between h-full p-1">
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           <div className="ml-2 flex w-full items-center justify-between">
             <Reveal>
               <img alt="Personal Info" loading="lazy" width="52" height="61" decoding="async" data-nimg="1"
@@ -78,7 +78,7 @@ const Page = () => {
                 </button>
               </Reveal>
               <Reveal>
-                <button onClick={(e) => navigate(`/acheivements`, e)}
+                <button onClick={(e) => navigate(`/experiences`, e)}
                   className="border border-slate-200/40 px-3 py-1.5 cursor-pointer flex items-center gap-2 w-fit hover:bg-slate-200 hover:text-zinc-900 transition-colors duration-500 ">
                   <FiArrowLeft size={18} />
                   <p className="hidden sm:block">Back to Acheivements</p>
@@ -89,11 +89,11 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-10 lg:flex-row">
-            <div className="flex w-full flex-col items-start gap-6 lg:w-[30%]">
+          <div className="flex flex-col gap-3 sm:gap-10 lg:flex-row">
+            <div className="flex w-full flex-col items-start gap-2 sm:gap-6 lg:w-[30%]">
               <div className="">
                 <Reveal>
-                  <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">It&apos;s time<br /> to talk!<br />Contact me</h1>
+                  <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">It&apos;s time to talk!<br />Contact me</h1>
                 </Reveal>
               </div>
               <div className="">

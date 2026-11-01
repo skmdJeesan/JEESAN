@@ -97,7 +97,7 @@ export const projects = [
       '/soenchat-web.png',
       '/soenchat-auth.png'
     ],
-    technologies: ["React", "Redux Toolkit", "Node.js", "MongoDB", "Redis", "Docker", "AWS ECS", "GitHub Actions"],
+    technologies: ["React", "Redux Toolkit", "Node.js", "MongoDB", "Redis", "Docker", "AWS ECS", "GitHub Actions", "LangChain", "LangGraph", "Qdrant", "RAG", "Razorpay"],
     liveUrl: "https://d2sxx6hi1j69nt.cloudfront.net/",
     githubUrl: "https://github.com/skmdJeesan/SOENCHAT",
     features: [
@@ -117,7 +117,7 @@ export const projects = [
       '/convolution-register.png',
       '/convolution-profile.png'
     ],
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Motion", "MongoDB", "NextAuth", "Spline", "ShadCN"],
     liveUrl: "https://convolutionjuee.com",
     githubUrl: "https://github.com/skmdJeesan/Convolution-XI",
     features: [
@@ -162,7 +162,7 @@ export const projects = [
       '/linkedin-comments.png',
       '/linkedin-posts.png',
     ],
-    technologies: ["MongoDB", "Express.js", "React", "Node.js"],
+    technologies: ["MongoDB", "Express.js", "React", "Node.js", "Cloudinary"],
     liveUrl: "https://linkedin-client-pe4j.onrender.com/",
     githubUrl: "https://github.com/skmdJeesan/LinkedIn",
     features: [
@@ -193,4 +193,35 @@ export const projects = [
       "Embeddable vanilla JS widget that works on any website"
     ]
   }
+];
+
+export const experiences = [
+  {
+    title: "Team Collaboration & Web Development",
+    org: "Jadavpur University",
+    date: "Jan 2026 — Feb 2026",
+    description: [
+      "Collaborated with department peers and team leads using Git and GitHub workflows to develop and launch the official Convolution XI tech fest platform.",
+      "Contributed as a member of the Convolution organizing committee, helping deliver a platform that supported 1,200+ user registrations.",
+    ],
+  },
+  {
+    title: "Consistency & Discipline",
+    org: "NPCI",
+    date: "Mar 2026 — Apr 2026",
+    description: [
+      "Successfully completed the 60-Day Problem of the Day (POTD) Challenge, demonstrating consistency and commitment to continuous learning.",
+      "Solved 150+ problems on GeeksforGeeks as part of the coding journey.",
+    ],
+  },
+  {
+    title: "Algorithmic Problem Solving",
+    org: "LeetCode",
+    date: "Aug 2023 — Present",
+    description: [
+      "Solved 650+ problems on LeetCode, demonstrating strong problem-solving, analytical thinking, and algorithm optimization skills.",
+      "Practiced data structures and algorithms consistently, strengthening skills in writing efficient solutions.",
+    ],
+  },
+  
 ];

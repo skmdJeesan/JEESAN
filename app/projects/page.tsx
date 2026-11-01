@@ -10,7 +10,7 @@ import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 const page = () => {
   const navigate = useIris()
   return (
-    <div className='min-h-screen p-4 sm:p-16'>
+    <div className='min-h-screen p-4 sm:px-12 sm:py-11'>
       <div className="space-y-3 sm:p-1 w-full">
         <div className="">
           <Reveal>
@@ -53,10 +53,10 @@ const page = () => {
         </div>
 
         <Reveal>
-          <div className="flex items-center gap-4 group cursor-pointer mt-7 w-fit">
+          <a href="https://github.com/skmdJeesan?tab=repositories" target="_blank" className="flex items-center gap-4 group cursor-pointer mt-7 w-full">
             <h2 className="text-xl font-semibold tracking-tight sm:text-2xl group-hover:border-b group-hover:border-b-slate-200/30 transition-colors duration-500">View More Projects</h2>
-            <FaArrowRight size={18} className="group-hover:translate-x-1 transition-all duration-500" />
-          </div>
+            <FaArrowRight size={18} className="group-hover:translate-x-0.5 transition-all duration-500" />
+          </a>
         </Reveal>
       </div>
     </div>

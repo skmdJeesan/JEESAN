@@ -1,5 +1,4 @@
 'use client'
-
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { animate, motion, useMotionTemplate, useMotionValue } from 'motion/react'

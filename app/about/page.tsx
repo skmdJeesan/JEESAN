@@ -8,8 +8,8 @@ import { FiArrowLeft, FiArrowRight, FiArrowUpLeft } from "react-icons/fi";
 const page = () => {
   const navigate = useIris()
   return (
-    <div className='min-h-screen p-4 sm:px-14 sm:py-11 w-screen'>
-      <div className="space-y-3 p-1 w-full">
+    <div className='min-h-screen p-4 sm:px-12 sm:py-11'>
+      <div className="space-y-2 p-1 w-full">
         <div className="">
           <Reveal>
             <img alt="Personal Info" loading="lazy" width="52" height="61" decoding="async" data-nimg="1"

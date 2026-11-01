@@ -25,9 +25,9 @@ const Activity = () => {
           </button>
         </Reveal>
         <Reveal>
-          <button onClick={(e) => navigate(`/acheivements`, e)}
+          <button onClick={(e) => navigate(`/experiences`, e)}
             className="border border-slate-200/40 px-3 py-1.5 cursor-pointer flex items-center gap-2 w-fit hover:bg-slate-200 hover:text-zinc-900 transition-colors duration-500 ">
-            <p className="hidden sm:block">My Acheivements</p>
+            <p className="hidden sm:block">My Experiences</p>
             <FiArrowRight size={18} />
           </button>
         </Reveal>

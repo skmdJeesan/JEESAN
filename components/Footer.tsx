@@ -1,15 +1,18 @@
+import { useIris } from "@/utils/IrisProvider";
 import Reveal from "@/utils/Reveal";
 import React from "react";
 
 const Footer = () => {
+  // const navigate = useIris()
   return (
     <div className="flex flex-col items-start justify-between gap-3 sm:gap-6 md:flex-row mt-2 sm:mt-0">
       <div className="flex flex-col items-start justify-start gap-2 md:flex-row md:gap-8">
         <div className="flex flex-col items-start gap-0.5">
           <Reveal><div>Crafted By</div></Reveal>
-          <Reveal>
-            <a href=""
-              className="border-b-2 border-zinc-800 font-serif text-sm font-normal italic"
+          <Reveal className="text-sm">
+            <a href="/"
+              // onClick={(e) => navigate(`/`, e)}
+              className="border-b-2 border-zinc-800 font-serif  font-normal italic"
             >
               Sk Md Jeesan
             </a>
@@ -21,7 +24,7 @@ const Footer = () => {
             <div className="font-serif text-sm font-normal italic flex items-center gap-2.5">
               <a
                 href="https://https://nextjs.org/"
-                className="border-b-2 border-zinc-800 font-normal  hover:border-brand-purple"
+                className="border-b-2 border-zinc-800 font-normal"
                 target="_blank"
                 rel="noreferrer"
               >

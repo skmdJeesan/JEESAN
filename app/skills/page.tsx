@@ -23,7 +23,7 @@ const SkillsPage = () => {
   const [active, setActive] = useState<CategoryKey | null>(null)
 
   return (
-    <div className='min-h-screen p-4 sm:px-14 sm:py-11'>
+    <div className='min-h-screen p-4 sm:px-12 sm:py-11'>
       <div className="space-y-3 p-1 w-ful">
         <div className="">
           <Reveal>
