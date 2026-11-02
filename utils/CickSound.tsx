@@ -10,7 +10,7 @@ export default function ClickSound() {
     const onClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       // only react to buttons, links, or anything marked as a button
-      if (!target.closest("button, a, [role='button'], div")) return;
+      if (!target.closest("button, a, [role='button']")) return;
 
       audio.currentTime = 0; // restart so rapid clicks still play
       audio.play().catch(() => {}); // ignore blocked-play errors

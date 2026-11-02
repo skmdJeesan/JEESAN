@@ -16,9 +16,9 @@ interface ProjectType {
   features: string[]
 }
 
-const ProjectCard = ({ key, project }: { key: number, project: ProjectType }) => {
+const ProjectCard = ({ project }: { project: ProjectType }) => {
   return (
-    <div className='flex flex-col md:flex-row items-start gap-4 sm:gap-10 hover:bg-zinc-800/30 p-0 sm:p-2 transition-colors duration-500 group'>
+    <div className='flex flex-col md:flex-row items-start gap-4 sm:gap-10 hover:bg-zinc-800/30 p-0 sm:p-2 transition-colors duration-500 group tablet:flex-col tablet:gap-6'>
       <div className="flex flex-col gap-3 sm:gap-4">
         <Reveal>
           <ProjectImageCard project={project}/>
@@ -37,16 +37,16 @@ const ProjectCard = ({ key, project }: { key: number, project: ProjectType }) =>
         </Reveal>
       </div>
 
-      <div className="space-y-2 sm:space-y-4">
+      <div className="w-full space-y-2 sm:space-y-4">
         <Reveal>
           <div className="flex items-start sm:items-center gap-4 w-full pr-2">
-            <h1 className="capitalize text-2xl font-bold tracking-tight sm:text-3xl">{project.title}</h1>
+            <h1 className="capitalize text-2xl font-bold tracking-tight sm:text-3xl tablet:text-2xl">{project.title}</h1>
             <TfiArrowTopRight className='h-7 w-7 mt-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-normal duration-500' />
           </div>
         </Reveal>
         <Reveal>
           <div className="">
-            <h2 className="text-sm sm:text-base text-slate-300 font-medium leading-[1.3]">{project.description}</h2>
+            <h2 className="text-sm sm:text-base text-slate-300 font-medium leading-[1.3] tablet:text-base">{project.description}</h2>
           </div>
         </Reveal>
         <Reveal>

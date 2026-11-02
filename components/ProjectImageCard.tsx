@@ -18,13 +18,13 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
 
   return (
     <>
-      <div className="relative pt-4 overflow-visible">
+      <div role='button' className="relative pt-4 overflow-visible">
         <motion.div
           layoutId={`card-${project.slug}`}
           onClick={() => setOpen(true)}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
-          className="relative w-70 aspect-video cursor-pointer"
+          className="relative w-70 aspect-video cursor-pointer tablet:w-full tablet:max-w-[480px]"
           style={{ borderRadius: 8 }}
         >
           {project.images.map((img, i) => (

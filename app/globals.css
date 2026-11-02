@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
-@theme {
+/* @theme {
   --animate-blink: blink 4s infinite;
 
   @keyframes blink {
     0%, 94%, 100% { transform: scaleY(1); }
     97% { transform: scaleY(0.1); }
   }
-}
+} */
