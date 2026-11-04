@@ -1,9 +1,10 @@
 import { FaCss3, FaGithub, FaHtml5, FaLinkedinIn, FaJava, FaReact, FaPython, FaServer, FaLinux, FaAws, FaDocker, FaGitAlt, FaNodeJs, FaCss3Alt } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { TbBrandLeetcode } from "react-icons/tb";
-import { SiApollographql, SiCplusplus, SiExpress, SiFirebase, SiFramer, SiGeeksforgeeks, SiGreensock, SiJavascript, SiKubernetes, SiLangchain, SiMongodb, SiMysql, SiNextdotjs, SiPostgresql, SiPostman, SiQdrant, SiRedis, SiRedux, SiRender, SiTailwindcss, SiTypescript, SiVercel } from "react-icons/si";
+import { TbBrandLeetcode, TbBrandSocketIo } from "react-icons/tb";
+import { SiApollographql, SiCplusplus, SiExpress, SiFirebase, SiFramer, SiGeeksforgeeks, SiGreensock, SiJavascript, SiKubernetes, SiLangchain, SiLanggraph, SiMongodb, SiMysql, SiNextdotjs, SiPostgresql, SiPostman, SiQdrant, SiRedis, SiRedux, SiRender, SiTailwindcss, SiTypescript, SiVercel } from "react-icons/si";
 import { Mail } from "lucide-react";
 import { BsArrowLeftRight, BsBraces, BsDiagram3, BsJavascript } from "react-icons/bs";
+import { VscMcp } from "react-icons/vsc";
 
 export const socials = [
   { name: 'GitHub', href: 'https://github.com/skmdJeesan', Icon: FaGithub },
@@ -33,6 +34,7 @@ export const technologies = [
   { name: "Firebase", logo: SiFirebase, type: ["backend"] },
   { name: "REST API", logo: BsArrowLeftRight, type: ["backend"] },
   { name: "GraphQL", logo: SiApollographql, type: ["backend"] },
+  { name: "Web Socket", logo: TbBrandSocketIo, type: ["backend"] },
   { name: "Postman", logo: SiPostman, type: ["backend"] },
 
   // Database
@@ -54,8 +56,10 @@ export const technologies = [
 
   // Generative AI
   { name: "LangChain", logo: SiLangchain, type: ["gen_ai"] },
+  { name: "LangGraph", logo: SiLanggraph, type: ["gen_ai"] },
   { name: "RAG", logo: BsBraces, type: ["gen_ai"] },
   { name: "Qdrant", logo: SiQdrant, type: ["gen_ai"] },
+  { name: "MCP", logo: VscMcp, type: ["gen_ai"]},
 
   // Others
   { name: "C/C++", logo: SiCplusplus, type: ["others"] },

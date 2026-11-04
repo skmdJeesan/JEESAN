@@ -14,17 +14,17 @@ const Right = () => {
     { route: 'contact', title: 'Contact', desc: 'Have an idea or opportunity? Let’s connect and make it happen.' },
   ];
   return (
-    <div className="w-full sm:w-[75%] p-1 sm:pl-16 sm:pr-10 sm:py-4 flex flex-col justify-between">
+    <div className="w-full sm:w-[75%] p-1 sm:pl-10 sm:pr-6 sm:py-4 lg:pl-16 lg:pr-10 lg:py-4 flex flex-col justify-between">
       <div className="hidden sm:block">
         <Reveal>
-          <h1 className="font-bold tracking-tight text-transparent [-webkit-text-stroke:0.5px_var(--color-slate-400)] sm:text-5xl hover:text-slate-400 transition-colors duration-500">
+          <h1 className="font-bold tracking-tight text-transparent [-webkit-text-stroke:0.5px_var(--color-slate-400)] text-3xl lg:text-5xl hover:text-slate-400 transition-colors duration-500">
             No Need to Scroll Explore my{' '}
             <span className="font-serif italic">portfolio</span>{' '}
             by clicking the sections below
           </h1>
         </Reveal>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-0 w-full">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-0 w-full">
         {sections.map(({ route, title, desc }) => (
           <SectionCard key={route} route={route} title={title} desc={desc} />
         ))}

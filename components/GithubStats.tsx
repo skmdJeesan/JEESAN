@@ -56,7 +56,6 @@ const CountUp = ({
   )
 }
 
-// Replaces shadcn's Tooltip: each cell keeps its own open/closed state
 const ContributionCell = ({ day, level_class }: ContrubutionProps) => {
   const [open, setOpen] = useState(false);
 
@@ -121,7 +120,7 @@ const GithubStats = ({ username }: Props) => {
 
   if (loading) {
     return (
-      <div className="rounded-xl border border-slate-200/20 bg-zinc-800/50 p-4 sm:p-6">
+      <div className="p-4 lg:p-6">
         <div className="space-y-4">
           <div className="h-4 bg-zinc-700 rounded w-3/4" />
           <div className="h-8 bg-zinc-700 rounded " />

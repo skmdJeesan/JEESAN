@@ -16,11 +16,11 @@ const Left = () => {
   const navigate = useIris()
 
   return (
-    <div className="w-full sm:w-[30%] sm:border-r sm:border-r-white/20 flex flex-col justify-between">
+    <div className="w-full lg:w-[30%] sm:border-r sm:border-r-white/20 flex flex-col justify-between">
       <div className="top p-1 sm:px-2 sm:py-4">
         <Reveal>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            <a href="/">Sk Md Jeesan</a>
+          <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
+            <a href="/">Jeesan</a>
           </h1>
         </Reveal>
         <Reveal>

@@ -8,7 +8,7 @@ import { FiArrowLeft, FiArrowRight, FiArrowUpLeft } from "react-icons/fi";
 const page = () => {
   const navigate = useIris()
   return (
-    <div className='min-h-screen p-4 sm:px-12 sm:py-11'>
+    <div className='min-h-screen p-4 sm:p-8 lg:px-12 lg:py-11'>
       <div className="space-y-2 p-1 w-full">
         <div className="">
           <Reveal>
@@ -34,7 +34,7 @@ const page = () => {
                 <button onClick={(e) => navigate(`/`, e)}
                   className="border border-slate-200/40 px-3 py-1.5 cursor-pointer flex items-center gap-2 w-fit hover:bg-slate-200 hover:text-zinc-900 transition-colors duration-500 ">
                   <FiArrowLeft size={18} />
-                  Back to Home
+                  <p className="hidden lg:block">Back to Home</p>
                 </button>
               </Reveal>
               <Reveal>
@@ -92,7 +92,7 @@ const page = () => {
             <Reveal><h2 className="text-xl sm:text-2xl font-semibold">My Education</h2></Reveal>
             <Reveal><FiArrowRight size={20} /></Reveal>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 w-full sm:w-[75%] gap-6 sm:gap-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 w-full sm:w-[75%] gap-6 sm:gap-8 lg:gap-0">
             <div className="flex items-start gap-4">
               <Reveal>
                 <div className="w-15 sm:w-20 h-15 sm:h-20 rounded-full overflow-hidden">
@@ -100,27 +100,27 @@ const page = () => {
                 </div>
               </Reveal>
               <Reveal>
-                <div className=" text-slate-300">
-                  <p className="text-xl sm:text-2xl font-semibold tracking-tight">Jadavpur University</p>
-                  <p className="text-sm sm:text-md font-medium tracking-tight">Bachelor of Engineering in Electrical</p>
-                  <p className="text-md font-medium tracking-tight">September 2023 - Present</p>
-                  <p className="text-sm sm:text-md font-medium tracking-tight">Current CGPA is 7.4/10</p>
+                <div className="text-slate-300">
+                  <p className="text-lg sm:text-xl font-semibold tracking-tight">Jadavpur University</p>
+                  <p className="text-xs sm:text-md font-medium tracking-tight">Bachelor of Engineering in Electrical</p>
+                  <p className="text-xs sm:text-md font-medium tracking-tight">September 2023 - Present</p>
+                  <p className="text-xs sm:text-md font-medium tracking-tight">Current CGPA is 7.4/10</p>
                 </div>
               </Reveal>
             </div>
             <div className="flex items-start gap-4">
               <Reveal>
-                <div className="w-15 sm:w-20 h-15 sm:h-20 rounded-full overflow-hidden bg-zinc-800/50 flex item-center justify-center p-3">
+                <div className="w-15 sm:w-20 h-15 sm:h-20 overflow-hidden">
                   {/* <img src="" alt="" className="w-full h-full object-cover" /> */}
-                  <School className="w-[90%] h-[90%]" />
+                  <School className="w-[70%] h-[70%]" />
                 </div>
               </Reveal>
               <Reveal>
                 <div className="text-slate-300">
-                  <p className="text-xl sm:text-2xl font-semibold tracking-tight">Pratappur High School</p>
-                  <p className="text-sm sm:text-md font-medium tracking-tight">Secondary and Higher Secondary(PCM) Education</p>
-                  <p className="text-sm sm:text-md font-medium tracking-tight">Till 2021</p>
-                  <p className="text-sm sm:text-md font-medium tracking-tight">Scored 84% in 10th Board and 80% in 12th Board Exam</p>
+                  <p className="text-lg sm:text-xl font-semibold tracking-tight">Pratappur High School</p>
+                  <p className="text-xs sm:text-md font-medium tracking-tight">Secondary and Higher Secondary(PCM) Education</p>
+                  <p className="text-xs sm:text-md font-medium tracking-tight">Till 2021</p>
+                  <p className="text-xs sm:text-md font-medium tracking-tight">Scored 84% in 10th Board and 80% in 12th Board Exam</p>
                 </div>
               </Reveal>
             </div>

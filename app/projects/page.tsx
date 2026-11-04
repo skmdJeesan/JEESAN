@@ -10,7 +10,7 @@ import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 const page = () => {
   const navigate = useIris()
   return (
-    <div className='min-h-screen p-4 sm:px-12 sm:py-11'>
+    <div className='min-h-screen p-4 sm:p-8 lg:px-12 lg:py-11'>
       <div className="space-y-3 sm:p-1 w-full">
         <div className="">
           <Reveal>

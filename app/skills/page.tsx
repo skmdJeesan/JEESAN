@@ -23,7 +23,7 @@ const SkillsPage = () => {
   const [active, setActive] = useState<CategoryKey | null>(null)
 
   return (
-    <div className='min-h-screen p-4 sm:px-12 sm:py-11'>
+    <div className='min-h-screen p-4 sm:p-8 lg:px-12 lg:py-11'>
       <div className="space-y-3 p-1 w-ful">
         <div className="">
           <Reveal>
@@ -57,13 +57,13 @@ const SkillsPage = () => {
                 <button onClick={(e) => navigate(`/about`, e)}
                   className="border border-slate-200/40 px-3 py-1.5 cursor-pointer flex items-center gap-2 w-fit hover:bg-slate-200 hover:text-zinc-900 transition-colors duration-500 ">
                   <FiArrowLeft size={18} />
-                  <p className="hidden sm:block">About Me</p>
+                  <p className="hidden lg:block">About Me</p>
                 </button>
               </Reveal>
               <Reveal>
                 <button onClick={(e) => navigate(`/projects`, e)}
                   className="border border-slate-200/40 px-3 py-1.5 cursor-pointer flex items-center gap-2 w-fit hover:bg-slate-200 hover:text-zinc-900 transition-colors duration-500 ">
-                  <p className="hidden sm:block">See My Projects</p>
+                  <p className="hidden lg:block">See My Projects</p>
                   <FiArrowRight size={18} />
                 </button>
               </Reveal>
@@ -86,7 +86,7 @@ const SkillsPage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center mt-6 sm:mt-10 w-full gap-3">
+        <div className="flex flex-col sm:flex-row items-start lg:items-center mt-6 sm:mt-10 w-full gap-3">
           <div className="flex items-center gap-6 w-full sm:w-[37%]">
             <Reveal><h2 className="text-xl font-semibold">Skills</h2></Reveal>
             <Reveal><FiArrowRight size={20} /></Reveal>
@@ -119,7 +119,7 @@ const SkillsPage = () => {
             <Reveal><FiArrowRight size={20} /></Reveal>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 w-full sm:w-fit">
+          <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-5 w-full sm:w-fit">
             {technologies.map((tech, i) => {
               const Icon = tech.logo
               const isMatch = active !== null && tech.type.includes(active)

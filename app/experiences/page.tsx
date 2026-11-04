@@ -12,7 +12,7 @@ const page = () => {
   `
   return (
     <>
-      <div className='p-4 sm:px-15 sm:py-9'>
+      <div className='p-4 sm:p-8 lg:px-12 lg:py-11'>
         <div className="space-y-3 p-1 w-full">
           <div className="">
             <Reveal>

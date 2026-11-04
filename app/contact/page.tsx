@@ -59,7 +59,7 @@ const Page = () => {
   const navigate = useIris()
 
   return (
-    <div className='h-screen p-4 sm:px-20 sm:py-16'>
+    <div className='h-screen p-4 sm:p-8 lg:px-12 lg:py-11'>
       <div className="w-full flex flex-col justify-between h-full p-1">
 
         <div className="space-y-6 sm:space-y-8">

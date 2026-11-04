@@ -5,7 +5,7 @@ import React from "react";
 const Footer = () => {
   // const navigate = useIris()
   return (
-    <div className="flex flex-col items-start justify-between gap-3 sm:gap-6 md:flex-row mt-2 sm:mt-0">
+    <div className="flex flex-col items-start justify-between gap-3 sm:gap-6 md:flex-row mt-2 sm:mt-0 w-full">
       <div className="flex flex-col items-start justify-start gap-2 md:flex-row md:gap-8">
         <div className="flex flex-col items-start gap-0.5">
           <Reveal><div>Crafted By</div></Reveal>
@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="flex flex-col items-start gap-0.5">
           <Reveal><div>Crafted Using</div></Reveal>
           <Reveal>
-            <div className="font-serif text-sm font-normal italic flex items-center gap-2.5">
+            <div className="font-serif text-sm  font-normal italic flex items-center gap-2.5">
               <a
                 href="https://https://nextjs.org/"
                 className="border-b-2 border-zinc-800 font-normal"
@@ -63,7 +63,7 @@ const Footer = () => {
           href="https://vercel.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-zinc-800 px-4 py-2 hover:bg-zinc-700 md:max-w-fit mb-2"
+          className="hidden lg:flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-zinc-800 px-4 py-2 hover:bg-zinc-700 md:max-w-fit mb-2"
         >
           <div className="">Proudly Hosted on </div>
           <img

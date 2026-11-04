@@ -5,7 +5,6 @@ import Spotlight from "@/components/Spotlight";
 import IrisProvider from "@/utils/IrisProvider";
 import ClickSound from "@/utils/CickSound";
 import MusicToggle from "@/utils/MusicToggle";
-import Preloader from "@/components/Preloader";
 
 const inter = Inter({subsets: ["latin"],});
 const poppins = Inter({subsets: ["latin"],});
@@ -27,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <ClickSound />
           <MusicToggle />
           <IrisProvider>
-            <Preloader>{children}</Preloader>
+            {children}
           </IrisProvider>
         </div>
       </body>

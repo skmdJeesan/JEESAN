@@ -166,7 +166,7 @@ const LeetCodeStats = ({ username }: Props) => {
 
   if (loading) {
     return (
-      <div className="border border-slate-200/20 bg-zinc-800/50 p-5 sm:p-6">
+      <div className="p-4 lg:p-6">
         <div className="space-y-4">
           <div className="h-8 w-3/4 rounded bg-zinc-600" />
           <div className="h-24 rounded bg-zinc-600" />
