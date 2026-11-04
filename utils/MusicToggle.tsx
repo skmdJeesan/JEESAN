@@ -73,7 +73,7 @@ export default function MusicToggle() {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.92 }}
       transition={{ type: "spring", stiffness: 400, damping: 25 }}
-      className="fixed bottom-5 right-5 z-50 grid size-9 place-items-center rounded-full border border-white/10 bg-zinc-900 text-slate-200 shadow-lg backdrop-blur-md sm:bottom-6 sm:right-6"
+      className="fixed bottom-4 right-5 z-50 grid size-8 place-items-center rounded-full border border-white/10 bg-zinc-900 text-slate-200 shadow-lg backdrop-blur-md sm:bottom-6 sm:right-6"
     >
       {playing ? <Equalizer /> : <MutedIcon />}
     </motion.button>

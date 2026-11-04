@@ -81,7 +81,7 @@ const Page = () => {
                 <button onClick={(e) => navigate(`/experiences`, e)}
                   className="border border-slate-200/40 px-3 py-1.5 cursor-pointer flex items-center gap-2 w-fit hover:bg-slate-200 hover:text-zinc-900 transition-colors duration-500 ">
                   <FiArrowLeft size={18} />
-                  <p className="hidden sm:block">Back to Acheivements</p>
+                  <p className="hidden sm:block">Back to Experiences</p>
                   
                 </button>
               </Reveal>
