@@ -56,7 +56,7 @@ const CountUp = ({
   useEffect(() => {
     if (!in_view) return
     if (reduce_motion) return
-    const controls = animate(0, to, { duration, ease: 'easeOut', onUpdate: set_value })
+    const controls = animate(0, to, { duration, ease: 'easeInOut', onUpdate: set_value })
     return () => controls.stop()
   }, [in_view, to, duration, reduce_motion])
 
@@ -73,11 +73,11 @@ const CountUp = ({
 }
 
 const cell_color = (count: number, max: number) => {
-  if (count === 0) return 'bg-zinc-600/60'
+  if (count === 0) return 'bg-zinc-700'
   const pct = (count / max) * 100
-  if (pct <= 25) return 'bg-slate-200/30'
-  if (pct <= 50) return 'bg-slate-200/50'
-  if (pct <= 75) return 'bg-slate-200/70'
+  if (pct <= 25) return 'bg-slate-400'
+  if (pct <= 50) return 'bg-slate-300'
+  if (pct <= 75) return 'bg-slate-100'
   return 'bg-slate-200'
 }
 
@@ -414,7 +414,7 @@ const LeetCodeStats = ({ username }: Props) => {
                               aria-label={label}
                               onPointerEnter={(e) => show_tip(e, label)}
                               onPointerLeave={(e) => e.pointerType === 'mouse' && set_hover(null)}
-                              className={`h-3 w-3 rounded-[3px] transition-colors duration-300 hover:bg-slate-200 ${cell_color(
+                              className={`h-3 w-3 rounded-[3px] transition-colors duration-300 hover:bg-white hover:scale-110 ${cell_color(
                                 d.count,
                                 heat.max
                               )}`}

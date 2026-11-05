@@ -58,7 +58,7 @@ const Left = () => {
             {quick_links.map((link, i) => (
               <Reveal key={i}>
                 <li onClick={(e) => navigate(`/${link}`, e)}>
-                  <a className="group flex items-center py-3 active" href={`#${link}`}>
+                  <div className="group flex items-center py-3 active cursor-pointer"  role="button">
                     <span className="nav-indicator mr-4 h-px w-7 bg-slate-300 transition-all group-hover:w-14 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
                     <span className="nav-text text-base font-bold uppercase tracking-wider text-slate-300 group-hover:text-slate-200 group-focus-visible:text-slate-200">
                       <div className="flex items-center gap-2">
@@ -66,7 +66,7 @@ const Left = () => {
                         {link}
                       </div>
                     </span>
-                  </a>
+                  </div>
               </li>
               </Reveal>
             ))}

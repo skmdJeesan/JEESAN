@@ -57,13 +57,13 @@ const SkillsPage = () => {
                 <button onClick={(e) => navigate(`/about`, e)}
                   className="border border-slate-200/40 px-3 py-1.5 cursor-pointer flex items-center gap-2 w-fit hover:bg-slate-200 hover:text-zinc-900 transition-colors duration-500 ">
                   <FiArrowLeft size={18} />
-                  <p className="hidden lg:block">About Me</p>
+                  <p className="hidden lg:block">About</p>
                 </button>
               </Reveal>
               <Reveal>
                 <button onClick={(e) => navigate(`/projects`, e)}
                   className="border border-slate-200/40 px-3 py-1.5 cursor-pointer flex items-center gap-2 w-fit hover:bg-slate-200 hover:text-zinc-900 transition-colors duration-500 ">
-                  <p className="hidden lg:block">See My Projects</p>
+                  <p className="hidden lg:block">Projects</p>
                   <FiArrowRight size={18} />
                 </button>
               </Reveal>

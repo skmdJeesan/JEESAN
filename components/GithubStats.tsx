@@ -1,6 +1,7 @@
 "use client";
-import React, { useRef } from "react";
-import { useEffect, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import { useEffect } from "react";
 import { Calendar, GitBranch, GitCommit, Star } from "lucide-react";
 import { useInView, useReducedMotion } from "motion/react";
 import { animate } from "motion";
@@ -58,14 +59,51 @@ const CountUp = ({
 
 const ContributionCell = ({ day, level_class }: ContrubutionProps) => {
   const [open, setOpen] = useState(false);
+  const [tooltipPosition, setTooltipPosition] = useState({ left: 0, top: 0 });
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const tooltipRef = useRef<HTMLDivElement>(null);
 
   const label = `${day.count} contribution${day.count === 1 ? "" : "s"} on ${new Date(
     day.date
   ).toLocaleDateString(undefined, { month: "short", day: "numeric" })}`;
 
+  useLayoutEffect(() => {
+    if (!open) return;
+
+    const updatePosition = () => {
+      const button = buttonRef.current?.getBoundingClientRect();
+      const tooltip = tooltipRef.current?.getBoundingClientRect();
+      if (!button || !tooltip) return;
+
+      const left = Math.max(
+        8,
+        Math.min(
+          button.left + button.width / 2 - tooltip.width / 2,
+          window.innerWidth - tooltip.width - 8
+        )
+      );
+      const above = button.top - tooltip.height - 8;
+      const top =
+        above >= 8
+          ? above
+          : Math.min(button.bottom + 8, window.innerHeight - tooltip.height - 8);
+
+      setTooltipPosition({ left, top: Math.max(8, top) });
+    };
+
+    updatePosition();
+    window.addEventListener("resize", updatePosition);
+    window.addEventListener("scroll", updatePosition, true);
+    return () => {
+      window.removeEventListener("resize", updatePosition);
+      window.removeEventListener("scroll", updatePosition, true);
+    };
+  }, [open]);
+
   return (
     <div className="relative">
       <button
+        ref={buttonRef}
         type="button"
         aria-label={label}
         onPointerEnter={(e) => e.pointerType === "mouse" && setOpen(true)}
@@ -76,19 +114,22 @@ const ContributionCell = ({ day, level_class }: ContrubutionProps) => {
           // touch screens have no hover, so a tap toggles the tooltip
           if ((e.nativeEvent as PointerEvent).pointerType === "touch") setOpen((o) => !o);
         }}
-        className={`block h-6 w-6 rounded-sm transition-colors duration-300 hover:bg-slate-200 sm:h-8 sm:w-8 ${level_class}`}
+        className={`block h-6 w-6 rounded-sm transition-colors duration-300 hover:bg-white hover:scale-110 sm:h-8 sm:w-8 ${level_class}`}
       />
 
-      <div className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 -translate-x-1/2">
-        {open && (
+      {open &&
+        typeof document !== "undefined" &&
+        createPortal(
           <div
+            ref={tooltipRef}
             role="tooltip"
-            className="whitespace-nowrap rounded-md bg-slate-200 px-2 py-1 text-xs font-semibold text-zinc-900 shadow-lg"
+            className="pointer-events-none fixed z-50 max-w-[calc(100vw-1rem)] whitespace-nowrap bg-slate-200 px-2 py-1 text-xs font-semibold text-zinc-900 shadow-lg"
+            style={tooltipPosition}
           >
             {label}
-          </div>
+          </div>,
+          document.body
         )}
-      </div>
     </div>
   );
 };
@@ -155,9 +196,9 @@ const GithubStats = ({ username }: Props) => {
     if (count === 0) return "bg-zinc-700";
     const percentage = (count / maxContributions) * 100;
 
-    if (percentage <= 25) return "bg-slate-200/30";
-    if (percentage <= 50) return "bg-slate-200/50";
-    if (percentage <= 75) return "bg-slate-200/70";
+    if (percentage <= 25) return "bg-slate-400";
+    if (percentage <= 50) return "bg-slate-200";
+    if (percentage <= 75) return "bg-slate-100";
 
     return "bg-slate-200";
   }
@@ -211,8 +252,7 @@ const GithubStats = ({ username }: Props) => {
         <Reveal className="relative w-full">
           <div className="space-y-2">
             <h4 className="text-sm font-medium text-slate-200/70">Last 30 days</h4>
-            {/* pt-12 / px-16 leave room so tooltips above the cells aren't clipped by overflow-x-auto */}
-            <div className="overflow-x-auto scrollbar-hide px-16 pt-12 pb-4 -mx-16 -mt-12">
+            <div className="overflow-x-auto scrollbar-hide pb-4">
               <div className="grid grid-rows-1 grid-flow-col gap-1 min-w-150">
                 {stats.contributions.slice(-30).map((day) => (
                   <ContributionCell
