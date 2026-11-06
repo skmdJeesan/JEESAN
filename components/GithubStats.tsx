@@ -22,16 +22,9 @@ interface ContrubutionProps {
   level_class: string;
 }
 
-const CountUp = ({
-  to,
-  decimals = 0,
-  duration = 1.2,
-  className,
-}: {
-  to: number
-  decimals?: number
-  duration?: number
-  className?: string
+const CountUp = ({ to, decimals = 0, duration = 1.2, className }: {
+  to: number, decimals?: number,
+  duration?: number, className?: string
 }) => {
   const ref = useRef<HTMLSpanElement>(null)
   const in_view = useInView(ref, { once: true, amount: 0.5 })
